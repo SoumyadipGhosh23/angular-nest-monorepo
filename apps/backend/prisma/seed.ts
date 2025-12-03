@@ -15,7 +15,7 @@ async function main() {
     select: { stripePriceId: true },
   });
   const existingPriceIds = new Set(
-    existingProducts.map((p) => p.stripePriceId)
+    existingProducts.map((p: { stripePriceId: string }) => p.stripePriceId)
   );
 
   console.log({ existingProducts });
